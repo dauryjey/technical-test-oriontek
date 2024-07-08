@@ -9,7 +9,6 @@ export const AddCompany = () => {
 
   const addCompany: UseMutationResult = useMutation({
     mutationFn: (newName) => {
-      console.log("name", newName)
       return fetcher(api.company.post, "POST", { name: newName })
     },
   })
